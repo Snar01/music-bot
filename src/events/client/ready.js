@@ -1,5 +1,4 @@
 const Event = require('../../structures/Event')
-const Dashboard = require("../../router/router");
 
 module.exports = class extends Event {
     constructor(client) {
@@ -13,7 +12,5 @@ module.exports = class extends Event {
         this.client.registryCommands();
 
         this.client.manager.init(this.client.user.id);
-
-        this.client.dashboard = new Dashboard(this.client);
     }
 }
